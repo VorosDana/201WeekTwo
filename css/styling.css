@@ -1,18 +1,20 @@
 body{
     background-color: #FA8072;
     color: #B1FBC0;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 header {
     background: #94877F;
     padding: 10px;
+    margin-bottom: 50px;
     border-bottom: 1px solid black;
 }
 
 h1 {
     color: #FA8072;
     font-size: 5em;
+    text-align: center;
 }
 
 table {
@@ -20,6 +22,7 @@ table {
     margin: 20px;
     border:  1px solid black;
     border-collapse: separate;
+    margin: auto;
 }
 th, td {
     border: 2px solid #94877F;
