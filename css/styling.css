@@ -26,3 +26,8 @@ th, td {
     padding: 2px;
     margin: 5px;
 }
+
+th {
+    /* display: inline-block; */
+    padding: 15px 5px;
+}
