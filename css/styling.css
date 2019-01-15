@@ -2,6 +2,7 @@ body{
     background-color: #FA8072;
     color: #B1FBC0;
     font-size: 1.3em;
+    font-family: "Courier New", serif;
 }
 
 header {
@@ -15,11 +16,13 @@ h1 {
     color: #FA8072;
     font-size: 5em;
     text-align: center;
+
 }
 
 div span {
     color: #94877F;
     text-align: center;
+    font-family: 'Coiny', cursive;
     /* font-size: 5em; */
 }
 
@@ -136,6 +139,7 @@ th, td {
     border: 2px solid #94877F;
     padding: 2px;
     margin: 5px;
+    font-family: 'Verdana', sans-serif;
 }
 
 th {
