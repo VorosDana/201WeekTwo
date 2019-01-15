@@ -112,6 +112,7 @@ function renderCookieStores() {
 function buildTitleRow() {
   var trEl = salesTable.insertRow(0);
   var workingThEl = document.createElement('th');
+  workingThEl.innerHTML = '<img src = "img/salmon.png" class="tableCorner">';
   trEl.appendChild(workingThEl);
   for(var i = 0; i < hours.length; i++)
   {

@@ -147,3 +147,7 @@ th {
     /* display: inline-block; */
     padding: 15px 5px;
 }
+
+.tableCorner {
+    width: 200px;
+}
