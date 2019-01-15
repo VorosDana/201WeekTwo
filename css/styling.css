@@ -121,8 +121,8 @@ https://www.w3schools.com/howto/howto_css_image_center.asp */
 }
 
 img.center {
-    margin-top: -150;
-    margin-bottom: 135;
+    margin-top: -150px;
+    margin-bottom: 135px;
 }
 
 table {
