@@ -41,8 +41,8 @@ var locOne = {
     salesTableTotal.textContent = salesTotal;
     tableRow.appendChild(salesTableTotal);
 
-    // put the row in the table
-    salesTable.appendChild(tableRow);
+    // put the row in the table - didn't work, done properly above
+    // salesTable.appendChild(tableRow);
   }
 };
 
