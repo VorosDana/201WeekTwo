@@ -5,23 +5,29 @@ var locOne = {
   minCust: 23,
   maxCust: 65,
   avgSales: 6.3,
+
   generateSales: function() {
     var outputSales = [];
     for(var i = 0; i < 15; i++){
-      outputSales.push(Math.floor((Math.random() * (this.maxCust-this.minCust))) + this.minCust);
+      outputSales.push(Math.floor(Math.random() * (this.maxCust-this.minCust)) + this.minCust);
     }
     return outputSales;
   },
+
   render: function() {
+    // build sales for the day
     var salesNumbers = this.generateSales();
-    // var tableRow = document.createElement('tr');
+
+    // build the table row to work in and put the location in first
     var tableRow = salesTable.insertRow(salesTable.rows);
     var locName = document.createElement('td');
     locName.textContent = this.location;
     tableRow.appendChild(locName);
 
+    // get var ready to track total sales
     var salesTotal = 0;
 
+    // add td elements to the table for each hour, and add up total while we're there
     for(var i = 0; i < 15; i++) {
       var salesTableOutput = document.createElement('td');
       salesTableOutput.textContent = salesNumbers[i];
@@ -30,11 +36,12 @@ var locOne = {
       salesTotal += salesNumbers[i];
     }
 
+    // add the total to the row
     var salesTableTotal = document.createElement('td');
     salesTableTotal.textContent = salesTotal;
     tableRow.appendChild(salesTableTotal);
 
-
+    // put the row in the table
     salesTable.appendChild(tableRow);
   }
 };
