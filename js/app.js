@@ -8,11 +8,11 @@ function CookieStore(location, minCust, maxCust, avgSales) {
   this.minCust = minCust;
   this.maxCust= maxCust;
   this.avgSales= avgSales;
-  this.salesNumbers = this.generateSales()
+  this.salesNumbers = this.generateSales();
   allCookieStores.push(this);
 }
 
-
+// builds an array of the sales for each hour
 CookieStore.prototype.generateSales = function() {
   var outputSales = [];
   for(var i = 0; i < 14; i++){
@@ -21,10 +21,8 @@ CookieStore.prototype.generateSales = function() {
   return outputSales;
 };
 
+// builds and adds the row for this cookie store in the sales table
 CookieStore.prototype.render = function() {
-  // build sales for the day
-  // var salesNumbers = this.generateSales();
-
   // build the table row to work in and put the location in first
   var tableRow = salesTable.insertRow(salesTable.rows.length);
   var locName = document.createElement('td');
@@ -52,14 +50,19 @@ CookieStore.prototype.render = function() {
   // salesTable.appendChild(tableRow);
 };
 
+// only need one of these, displays the totals for all locations for a column
 var hourlyTotalsRow = {
+  // define the row so we can build it later and reference it
   totalRow: undefined,
 
   render: function() {
+    // this is called last, so it'll be the last row
     this.totalRow = salesTable.insertRow(salesTable.rows.length);
 
+    // make empty cells here, then use the update function to fill them
+    // this makes the update code reusable without hassle
     var tdEl = document.createElement('td');
-    tdEl.textContent = 'Hourly Totals';
+    tdEl.textContent = 'All Locations';
     this.totalRow.appendChild(tdEl);
 
     for(var i = 0; i < hours.length + 1; i++)
@@ -71,11 +74,15 @@ var hourlyTotalsRow = {
     this.update();
   },
 
+  // sets the values of the totals row
   update: function() {
+    // make sure we can access the total of all locations through the whole day at the end
     var dailyTotalAllLoc = 0;
 
+    // add up each column
     for(var i = 0; i < hours.length; i++)
     {
+      // iterate through each cookie shop and get the sales amount for that hour
       var hourlyTotalAllLoc = 0;
       for(var j = 0; j < allCookieStores.length; j++)
       {
@@ -83,13 +90,17 @@ var hourlyTotalsRow = {
       }
       dailyTotalAllLoc += hourlyTotalAllLoc;
 
+      // find column i, not counting the label column, in the last row and set the text
       salesTable.rows[salesTable.rows.length -1].childNodes[i + 1].textContent = hourlyTotalAllLoc;
 
     }
+
+    // put the grand total in the last column of the last row
     salesTable.rows[salesTable.rows.length -1].childNodes[salesTable.rows[salesTable.rows.length -1].childNodes.length - 1].textContent = dailyTotalAllLoc;
   }
 };
 
+// call render() from each store
 function renderCookieStores() {
   for(var i = 0; i < allCookieStores.length; i++)
   {
@@ -97,6 +108,7 @@ function renderCookieStores() {
   }
 }
 
+// builds the top row with the column labels, called first
 function buildTitleRow() {
   var trEl = salesTable.insertRow(0);
   var workingThEl = document.createElement('th');
@@ -108,16 +120,18 @@ function buildTitleRow() {
     trEl.appendChild(workingThEl);
   }
   workingThEl = document.createElement('th');
-  workingThEl.textContent = 'Location Daily Total';
+  workingThEl.textContent = 'Daily Total';
   trEl.appendChild(workingThEl);
 }
 
+// build all of the cookie stores, they put their reference in the allCookieStores array, so no need to save that
 new CookieStore('1st and Pike', 23, 65, 6.3);
 new CookieStore('SeaTac Airport', 3, 24, 1.2);
 new CookieStore('Seattle Center', 11, 38, 3.7);
 new CookieStore('Capitol Hill', 20, 38, 2.3);
 new CookieStore('Alki', 2, 16, 4.6);
 
+// add the title row up top, then the stores, then the bottom row of totals
 buildTitleRow();
 renderCookieStores();
 
