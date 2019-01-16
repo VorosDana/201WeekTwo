@@ -24,7 +24,7 @@ CookieStore.prototype.generateSales = function() {
 // builds and adds the row for this cookie store in the sales table
 CookieStore.prototype.render = function() {
   // build the table row to work in and put the location in first
-  var tableRow = salesTable.insertRow(salesTable.rows.length);
+  var tableRow = salesTable.insertRow(salesTable.rows.length-1);
   var locName = document.createElement('td');
   locName.textContent = this.location;
   tableRow.appendChild(locName);
@@ -137,6 +137,5 @@ new CookieStore('Alki', 2, 16, 4.6);
 
 // add the title row up top, then the stores, then the bottom row of totals
 buildTitleRow();
-renderCookieStores();
-
 hourlyTotalsRow.render();
+renderCookieStores();
