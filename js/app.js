@@ -16,7 +16,7 @@ function CookieStore(location, minCust, maxCust, avgSales) {
 CookieStore.prototype.generateSales = function() {
   var outputSales = [];
   for(var i = 0; i < 14; i++){
-    outputSales.push(Math.floor(Math.random() * (this.maxCust-this.minCust)) + this.minCust);
+    outputSales.push(Math.floor(((Math.random() * (this.maxCust-this.minCust)) + this.minCust)* this.avgSales));
   }
   return outputSales;
 };
