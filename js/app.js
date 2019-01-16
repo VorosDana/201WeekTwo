@@ -15,7 +15,7 @@ function CookieStore(location, minCust, maxCust, avgSales) {
 // builds an array of the sales for each hour
 CookieStore.prototype.generateSales = function() {
   var outputSales = [];
-  for(var i = 0; i < 14; i++){
+  for(var i = 0; i < hours.length; i++){
     outputSales.push(Math.floor(((Math.random() * (this.maxCust-this.minCust)) + this.minCust)* this.avgSales));
   }
   return outputSales;
@@ -33,7 +33,7 @@ CookieStore.prototype.render = function() {
   var salesTotal = 0;
 
   // add td elements to the table for each hour, and add up total while we're there
-  for(var i = 0; i < 14; i++) {
+  for(var i = 0; i < hours.length; i++) {
     var salesTableOutput = document.createElement('td');
     salesTableOutput.textContent = this.salesNumbers[i];
     tableRow.appendChild(salesTableOutput);
