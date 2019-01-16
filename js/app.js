@@ -1,3 +1,5 @@
+'use strict';
+
 var salesTable = document.getElementById('sales-data');
 var allCookieStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -108,7 +110,7 @@ function renderCookieStores() {
   }
 }
 
-// builds the top row with the column labels, called first
+// builds the top row with the column labels, this is called first so it's the first row
 function buildTitleRow() {
   var trEl = salesTable.insertRow(0);
   var workingThEl = document.createElement('th');
