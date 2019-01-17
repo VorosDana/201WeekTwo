@@ -20,13 +20,9 @@ function CookieStore(location, minCust, maxCust, avgSales) {
 CookieStore.prototype.generateSales = function () {
   var outputSales = [];
   for (var i = 0; i < hours.length; i++) {
-    // Results were inconsistent, split the function
-    var salesThisHour = (Math.random() * (this.maxCust - this.minCust));
-    // console.log(this.location, ' random part:', salesThisHour);
-    salesThisHour += this.minCust;
-    // console.log(this.location, ' after adding min:', salesThisHour);
-    salesThisHour *= this.avgSales;
-    // console.log(this.location, ' times avgSales:', salesThisHour);
+
+    var salesThisHour = ((Math.random() * (this.maxCust - this.minCust)) + this.minCust) * this.avgSales;
+
     outputSales.push(Math.floor(salesThisHour));
   }
   return outputSales;
