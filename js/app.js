@@ -146,6 +146,7 @@ function addNewLoc(event) {
   } else {
     new CookieStore(event.target.location.value, parseInt(event.target.minCust.value), parseInt(event.target.maxCust.value), parseInt(event.target.avgSales.value));
     allCookieStores[allCookieStores.length - 1].render();
+    hourlyTotalsRow.update();
   }
 }
 

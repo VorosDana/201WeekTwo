@@ -5,22 +5,31 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/styling.css">
     </head>
-    
+
     <body>
         <form id="add-store-form">
                 <fieldset>
                     <p>Add a new store</p>
-                    <label for="location">Location:</label>
-                    <input name="location" type="text">
+                    
+                    <div>
+                        <label for="location">Location:</label>
+                        <input name="location" type="text">
+                    </div>
         
-                    <label for="minCust">Minimum Hourly Customers:</label>
-                    <input name="minCust" type="number">
+                    <div>
+                        <label for="minCust">Minimum Hourly Customers:</label>
+                        <input name="minCust" type="number">
+                    </div>
         
-                    <label for="maxCust">Maximum Hourly Customer:</label>
-                    <input name="maxCust" type="number">
-        
-                    <label for="avgSales">Average Cookies Per Customer:</label>
-                    <input name="avgSales" type="number">
+                    <div>
+                        <label for="maxCust">Maximum Hourly Customer:</label>
+                        <input name="maxCust" type="number">
+                    </div>
+
+                    <div>
+                        <label for="avgSales">Average Cookies Per Customer:</label>
+                        <input name="avgSales" type="number">
+                    </div>
         
                     <button type="submit">Add Store</button>
                 </fieldset>
