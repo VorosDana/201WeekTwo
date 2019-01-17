@@ -23,98 +23,62 @@ h1 {
 
 }
 
-div span {
+.fish-logo p, .fish-logo-bottom  p{
   color: #94877F;
   text-align: center;
   font-family: 'Coiny', cursive;
-  /* font-size: 5em; */
-}
-
-.top-text {
-  position: relative;
-  width: 1000px;
-  height: 500px;
-  margin: -50px auto;
   font-size: 5em;
 }
 
-.top-text span {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 50px;
-  margin-left: -5px;
-  transform-origin: bottom center;
-  line-height: 800px;
-}
-
-.bottom-text {
-  position: relative;
-  width: 1000px;
-  height: 500px;
-  margin: 0 auto;
-  font-size: 5em;
-}
-
-.bottom-text span {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 50px;
-  margin-left: -5px;
-  transform-origin: top center;
-  line-height: 800px;
-}
-
-.top-text span:nth-of-type(1) {
+.fish-logo p:nth-of-type(1) {
   transform: rotate(-70deg);
 }
 
-.top-text span:nth-of-type(2) {
+.fish-logo p:nth-of-type(2) {
   transform: rotate(-42deg);
 }
 
-.top-text span:nth-of-type(3) {
+.fish-logo p:nth-of-type(3) {
   transform: rotate(-14deg);
 }
 
-.top-text span:nth-of-type(4) {
+.fish-logo p:nth-of-type(4) {
   transform: rotate(14deg);
 }
 
-.top-text span:nth-of-type(5) {
+.fish-logo p:nth-of-type(5) {
   transform: rotate(42deg);
 }
 
-.top-text span:nth-of-type(6) {
+.fish-logo p:nth-of-type(6) {
   transform: rotate(70deg);
 }
 
-.bottom-text span:nth-of-type(7) {
+.fish-logo-bottom p:nth-of-type(7) {
   transform: rotate(-51deg);
 }
 
-.bottom-text span:nth-of-type(6) {
+.fish-logo-bottom p:nth-of-type(6) {
   transform: rotate(-34deg);
 }
 
-.bottom-text span:nth-of-type(5) {
+.fish-logo-bottom p:nth-of-type(5) {
   transform: rotate(-17deg);
 }
 
-.bottom-text span:nth-of-type(4) {
+.fish-logo-bottom p:nth-of-type(4) {
   transform: rotate(0deg);
 }
 
-.bottom-text span:nth-of-type(3) {
+.fish-logo-bottom p:nth-of-type(3) {
   transform: rotate(17deg);
 }
 
-.bottom-text span:nth-of-type(2) {
+.fish-logo-bottom p:nth-of-type(2) {
   transform: rotate(34deg);
 }
 
-.bottom-text span:nth-of-type(1) {
+.fish-logo-bottom p:nth-of-type(1) {
   transform: rotate(51deg);
 }
 
@@ -204,12 +168,35 @@ div a {
 .fish-logo{
   position: fixed;
   width: 70%;
-  height: 100%;
-  top: 0;
+  width: 70vmin;
+  height: 50vmin;
+  bottom: 50%;
+  left: 15%;
+}
+
+.fish-logo-bottom{
+  position: fixed;
+  width: 70vmin;
+  height: 50vmin;
+  top: 50%;
   left: 15%;
 }
 
 .fish-logo p{
-  
+  position: absolute;
+  left: 45%;
+  top: 0;
+  height: 80%;
+  /* padding-top: 20%; */
+  transform-origin: bottom center;
+}
+
+.fish-logo-bottom p{
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  height: 10%;
+  padding-top: 45%;
+  transform-origin: top center;
 }
 /* fieldset div {} */
