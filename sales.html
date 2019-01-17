@@ -13,22 +13,22 @@
                     
                     <div>
                         <label for="location">Location:</label>
-                        <input name="location" type="text">
+                        <input name="location" type="text" required>
                     </div>
         
                     <div>
                         <label for="minCust">Minimum Hourly Customers:</label>
-                        <input name="minCust" type="number">
+                        <input name="minCust" type="number" min= "0" required>
                     </div>
         
                     <div>
                         <label for="maxCust">Maximum Hourly Customer:</label>
-                        <input name="maxCust" type="number">
+                        <input name="maxCust" type="number" min= "0" required>
                     </div>
 
                     <div>
                         <label for="avgSales">Average Cookies Per Customer:</label>
-                        <input name="avgSales" type="number">
+                        <input name="avgSales" type="number" min= "0" required step="0.01">
                     </div>
         
                     <button type="submit">Add Store</button>

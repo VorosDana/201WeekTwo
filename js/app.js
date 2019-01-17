@@ -141,8 +141,8 @@ function addNewLoc(event) {
   // console.log(`didn't refresh`);
   event.preventDefault();
   // console.log(event.target.location.value, ',', event.target.minCust.value, ',', event.target.maxCust.value, ',', event.target.avgSales.value);
-  if (!event.target.location.value || !event.target.minCust.value || !event.target.maxCust.value || !event.target.avgSales.value) {
-    return alert('Fields cannot be empty!');
+  if (parseInt(event.target.maxCust) < parseInt(event.target.minCust)) {
+    return alert('Minimum customers cannot be more than maximum!');
   } else {
     new CookieStore(event.target.location.value, parseInt(event.target.minCust.value), parseInt(event.target.maxCust.value), parseInt(event.target.avgSales.value));
     allCookieStores[allCookieStores.length - 1].render();
