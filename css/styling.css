@@ -3,6 +3,9 @@ body{
     color: #B1FBC0;
     font-size: 1.3em;
     font-family: "Courier New", serif;
+}
+
+.public-page {
     overflow-y: hidden;
 }
 
@@ -196,3 +199,5 @@ div a {
     font-style: italic;
     bottom: 5em;
 }
+
+/* fieldset div {} */
