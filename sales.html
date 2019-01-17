@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>Salmon Cookie Sales Projections</Title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/styling.css">
     </head>
+    
     <body>
+        <form id="add-store-form">
+                <fieldset>
+                    <p>Add a new store</p>
+                    <label for="location">Location:</label>
+                    <input name="location" type="text">
+        
+                    <label for="minCust">Minimum Hourly Customers:</label>
+                    <input name="minCust" type="number">
+        
+                    <label for="maxCust">Maximum Hourly Customer:</label>
+                    <input name="maxCust" type="number">
+        
+                    <label for="avgSales">Average Cookies Per Customer:</label>
+                    <input name="avgSales" type="number">
+        
+                    <button type="submit">Add Store</button>
+                </fieldset>
+            </form>
         <header>
             <h1>Salmon Cookie Sales Projections</h1>
         </header>
