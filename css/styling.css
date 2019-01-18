@@ -31,27 +31,27 @@ h1 {
 }
 
 .fish-logo p:nth-of-type(1) {
-  transform: rotate(-70deg);
+  transform: rotate(-50deg);
 }
 
 .fish-logo p:nth-of-type(2) {
-  transform: rotate(-42deg);
+  transform: rotate(-30deg);
 }
 
 .fish-logo p:nth-of-type(3) {
-  transform: rotate(-14deg);
+  transform: rotate(-10deg);
 }
 
 .fish-logo p:nth-of-type(4) {
-  transform: rotate(14deg);
+  transform: rotate(10deg);
 }
 
 .fish-logo p:nth-of-type(5) {
-  transform: rotate(42deg);
+  transform: rotate(30deg);
 }
 
 .fish-logo p:nth-of-type(6) {
-  transform: rotate(70deg);
+  transform: rotate(50deg);
 }
 
 .fish-logo-bottom p:nth-of-type(7) {
@@ -128,23 +128,25 @@ th {
 
 .sidebar-left {
   height: 100%;
-  width: 15%;
+  width: 15vmin;
   position: fixed;
   /* z-index: 1; */
   top: 20%;
-  left: 0;
-  /* right: 50vw;
-  margin-right: 35vmin; */
+  /* left: 0; */
+  right: 50vw;
+  margin-right: 35vmin;
   /* display: inline-block; */
 }
 
 .sidebar-right {
   height: 100%;
-  width: 15%;
+  width: 15vmin;
   position: fixed;
   /* z-index: 1; */
   top: 30%;
-  right: 0;
+  /* right: 0; */
+  left: 50vw;
+  margin-left: 35vmin;
 }
 
 /* section p {
@@ -175,7 +177,7 @@ div a {
   position: fixed;
   /* width: 70%; */
   width: 70vmin;
-  height: 50vmin;
+  height: 40vmin;
   bottom: 50%;
   left: 50vw;
   margin-left: -35vmin;
@@ -206,7 +208,7 @@ div a {
   left: 45%;
   top: 0;
   height: 10%;
-  padding-top: 45%;
+  padding-top: 35%;
   width: 10%;
   /* margin-left: -10%; */
   transform-origin: top center;
