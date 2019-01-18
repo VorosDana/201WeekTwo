@@ -7,6 +7,7 @@ body{
 
 .public-page {
   overflow-y: hidden;
+  font-size: 2.3vmin;
 }
 
 header {
@@ -20,7 +21,6 @@ h1 {
   color: #FA8072;
   font-size: 5em;
   text-align: center;
-
 }
 
 .fish-logo p, .fish-logo-bottom  p{
@@ -122,6 +122,10 @@ th {
   width: 10vw;
 }
 
+.sidebar-left p, .sidebar-right p {
+  padding: 0 .5em .5em;
+}
+
 .sidebar-left {
   height: 100%;
   width: 15%;
@@ -129,6 +133,8 @@ th {
   /* z-index: 1; */
   top: 20%;
   left: 0;
+  /* right: 50vw;
+  margin-right: 35vmin; */
   /* display: inline-block; */
 }
 
@@ -141,9 +147,9 @@ th {
   right: 0;
 }
 
-section p {
+/* section p {
   padding: 0 .5em .5em;
-}
+} */
 
 .sidebar-right ul li {
   padding: 0.1em;
@@ -167,11 +173,12 @@ div a {
 
 .fish-logo{
   position: fixed;
-  width: 70%;
+  /* width: 70%; */
   width: 70vmin;
   height: 50vmin;
   bottom: 50%;
-  left: 15%;
+  left: 50vw;
+  margin-left: -35vmin;
 }
 
 .fish-logo-bottom{
@@ -179,14 +186,17 @@ div a {
   width: 70vmin;
   height: 50vmin;
   top: 50%;
-  left: 15%;
+  left: 50%;
+  margin-left: -35vmin;
 }
 
 .fish-logo p{
   position: absolute;
   left: 45%;
-  top: 0;
-  height: 80%;
+  bottom: 0;
+  height: 100%;
+  width: 10%;
+  /* margin-left: -10%; */
   /* padding-top: 20%; */
   transform-origin: bottom center;
 }
@@ -194,9 +204,17 @@ div a {
 .fish-logo-bottom p{
   position: absolute;
   left: 45%;
-  bottom: 0;
+  top: 0;
   height: 10%;
   padding-top: 45%;
+  width: 10%;
+  /* margin-left: -10%; */
   transform-origin: top center;
 }
-/* fieldset div {} */
+
+.fish-logo-fish {
+  position: absolute;
+  top: 40vh;
+  left: 18vw;
+  width: 60%;
+}
