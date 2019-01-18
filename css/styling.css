@@ -274,3 +274,14 @@ div a {
 .sidebar-left img {
   width: 100%;
 }
+
+fieldset {
+  border: 2px solid black;
+  margin: 15px;
+  padding: 5px;
+  display: inline-block;
+}
+
+fieldset div {
+  
+}
