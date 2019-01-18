@@ -140,6 +140,24 @@ th {
   font-size: .8em;
 }
 
+.bottom-left-image {
+  width: 15vmin;
+  position: fixed;
+  right: 50vw;
+  margin-right: 35vmin;
+  top: 50%;
+  margin-top: 35vmin;
+}
+
+.top-left-image {
+  width: 15vmin;
+  position: fixed;
+  right: 50vw;
+  margin-right: 35vmin;
+  bottom: 50%;
+  margin-bottom: 35vmin;
+}
+
 .sidebar-right {
   /* height: 100%; */
   width: 15vmin;
@@ -151,6 +169,26 @@ th {
   left: 50vw;
   margin-left: 35vmin;
 }
+
+.bottom-right-image {
+  width: 15vmin;
+  position: fixed;
+  left: 50vw;
+  margin-left: 35vmin;
+  top: 50%;
+  margin-top: 35vmin;
+}
+
+.top-right-image {
+  width: 15vmin;
+  position: fixed;
+  left: 50vw;
+  margin-left: 35vmin;
+  bottom: 50%;
+  margin-bottom: 35vmin;
+}
+
+
 
 /* section p {
   padding: 0 .5em .5em;
@@ -217,9 +255,22 @@ div a {
   transform-origin: top center;
 }
 
-.fish-logo-fish {
+.fish-logo-fish-one {
   position: absolute;
-  top: 40vh;
-  left: 18vw;
-  width: 60%;
+  bottom: 35vh;
+  left: 50%;
+  margin-left: -20vmin;
+  width: 40vmin;
+}
+
+.fish-logo-fish-two {
+  position: absolute;
+  top: 35vh;
+  left: 50%;
+  margin-left: -20vmin;
+  width: 40vmin;
+}
+
+.sidebar-left img {
+  width: 100%;
 }
