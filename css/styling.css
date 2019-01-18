@@ -1,5 +1,5 @@
 body{
-  background-color: #FA8072;
+  background-color: #F56D5D;
   color: #D3F5D9;
   font-size: 1.2vw;
   font-family: "Courier New", serif;
@@ -43,7 +43,7 @@ h1 {
 }
 
 .fish-logo p:nth-of-type(4) {
-  transform: rotate(10deg);
+  transform: rotate(8deg);
 }
 
 .fish-logo p:nth-of-type(5) {
@@ -63,11 +63,11 @@ h1 {
 }
 
 .fish-logo-bottom p:nth-of-type(5) {
-  transform: rotate(-17deg);
+  transform: rotate(-19deg);
 }
 
 .fish-logo-bottom p:nth-of-type(4) {
-  transform: rotate(0deg);
+  transform: rotate(-2deg);
 }
 
 .fish-logo-bottom p:nth-of-type(3) {
@@ -257,7 +257,7 @@ div a {
 
 .fish-logo-fish-one {
   position: absolute;
-  bottom: 35vh;
+  top: 52vh;
   left: 50%;
   margin-left: -20vmin;
   width: 40vmin;
@@ -265,7 +265,7 @@ div a {
 
 .fish-logo-fish-two {
   position: absolute;
-  top: 35vh;
+  bottom: 52vh;
   left: 50%;
   margin-left: -20vmin;
   width: 40vmin;
