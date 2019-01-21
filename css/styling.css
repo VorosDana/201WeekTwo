@@ -17,6 +17,14 @@ header {
   border-bottom: 1px solid black;
 }
 
+input, button {
+  float: right;
+}
+
+label {
+  text-align: right;
+}
+
 h1 {
   color: #FA8072;
   font-size: 5em;
@@ -280,8 +288,4 @@ fieldset {
   margin: 15px;
   padding: 5px;
   display: inline-block;
-}
-
-fieldset div {
-  
 }
