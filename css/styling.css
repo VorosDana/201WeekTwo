@@ -289,3 +289,8 @@ fieldset {
   padding: 5px;
   display: inline-block;
 }
+
+table + a {
+  padding-top: 2em;
+  float: right;
+}
